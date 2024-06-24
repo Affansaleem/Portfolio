@@ -1,0 +1,62 @@
+.about-me-container {
+  width: 100%;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #040222 0%, #210235 100%);
+  color: #fff; /* Text color */
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: left;
+}
+
+.section-icon {
+  color: #00ffab; /* Color for the icon */
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: left; /* Center content vertically within the container */
+  align-items: center; /* Center items horizontally */
+  text-align: left; /* Center text content */
+}
+
+.about-me-text {
+  font-size: 1.125rem; /* Text size */
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif; /* Example: Replace 'Roboto' with your desired font */
+  font-weight: 300; /* Thin font weight */
+}
+
+.about-me-image img {
+  width: 270px;
+  height: 400px;
+  border-radius: 10px;
+  border: 2px solid #fff; /* Border for the image */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .about-me-content {
+    flex-direction: row;
+    align-items: center; /* Center items vertically */
+  }
+
+  .about-me-text,
+  .about-me-image {
+    flex: 1;
+  }
+
+  .about-me-image {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

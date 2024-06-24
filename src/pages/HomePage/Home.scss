@@ -1,0 +1,44 @@
+.home-container {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start; /* Aligns the button to the left */
+  align-items: flex-start;
+  margin-top: 520px; /* Add margin to create space below the header */
+  left: 0;
+}
+
+.gradient-button {
+  font-size: 1.25rem; /* Equivalent to text-xl */
+  font-weight: bold;
+  color: black;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 50%, #a1c4fd 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 50%, #a1c4fd 100%);
+  z-index: -1;
+  filter: blur(15px);
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-button:hover::before {
+  filter: blur(20px);
+}

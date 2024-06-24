@@ -2,11 +2,19 @@ import "./navbar.scss";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const bounceTransition = {
-    type: "spring",
-    stiffness: 500,
-    damping: 20,
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const section = document.querySelector(id);
+    const offset = -120; // Adjust this value to set the offset above the section
+    const sectionPosition =
+      section.getBoundingClientRect().top + window.pageYOffset + offset;
+
+    window.scrollTo({
+      top: sectionPosition,
+      behavior: "smooth",
+    });
   };
+
   return (
     <nav className="navbar">
       <div className="navbar__logo">
@@ -16,7 +24,8 @@ const Navbar = () => {
         <li className="navbar__item">
           <a
             href="#home"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white  hover:text-2xl hover:before:content-['•']  hover:before:text-2xl"
+            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            onClick={(e) => handleScroll(e, "#home")}
           >
             &lt;/Home&gt;
           </a>
@@ -24,7 +33,8 @@ const Navbar = () => {
         <li className="navbar__item">
           <a
             href="#about"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white  hover:text-2xl hover:before:content-['•']  hover:before:text-2xl"
+            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            onClick={(e) => handleScroll(e, "#about")}
           >
             &lt;/AboutMe&gt;
           </a>
@@ -32,7 +42,8 @@ const Navbar = () => {
         <li className="navbar__item">
           <a
             href="#skills"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white  hover:text-2xl hover:before:content-['•']  hover:before:text-2xl"
+            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            onClick={(e) => handleScroll(e, "#skills")}
           >
             &lt;/Skills&gt;
           </a>
@@ -40,7 +51,8 @@ const Navbar = () => {
         <li className="navbar__item">
           <a
             href="#projects"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white  hover:text-2xl hover:before:content-['•']  hover:before:text-2xl"
+            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            onClick={(e) => handleScroll(e, "#projects")}
           >
             &lt;/Projects&gt;
           </a>
