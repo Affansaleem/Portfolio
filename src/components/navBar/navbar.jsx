@@ -1,5 +1,4 @@
 import "./navbar.scss";
-import { motion } from "framer-motion";
 
 const Navbar = () => {
   const handleScroll = (e, id) => {
@@ -18,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <img src="hellooo.png" alt="Logo" />
+        <img src="haiii.png" alt="Logo" />
       </div>
       <ul className="navbar__menu flex space-x-8 text-white text-sm font-mono">
         <li className="navbar__item">

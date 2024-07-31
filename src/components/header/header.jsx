@@ -24,7 +24,6 @@ const stretchJiggleVariants = {
 };
 
 const splitText = (text) => {
-  // Split text by spaces and keep track of space presence
   const words = text.split(" ");
   const spans = [];
 

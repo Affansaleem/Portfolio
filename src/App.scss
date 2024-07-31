@@ -1,14 +1,39 @@
+/* Hide the default cursor */
 * {
   cursor: none;
+  /* Custom scrollbar for Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #a000ff #2d1b49;
 }
+
+/* Custom scrollbars for WebKit browsers (Chrome, Safari) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* For horizontal scrollbars */
+}
+
+*::-webkit-scrollbar-track {
+  background: #2d1b49; /* Background of the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #a000ff; /* Vibrant purple color for the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #2d1b49; /* Border color to match the track background */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #9000e5; /* Slightly darker purple on hover */
+}
+
 .app {
   background: linear-gradient(135deg, #040222 0%, #210235 100%);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .cursor {
   background-color: #fafafa;
   height: 32px;

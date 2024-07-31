@@ -1,0 +1,41 @@
+.footer {
+  background: linear-gradient(135deg, #040222, #210235, #6a0dad, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+
+  .footer-social {
+    .footer-social-link {
+      color: #ffffff;
+      font-size: 2rem; /* Increased font size for icons */
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+      &:hover {
+        color: #5da867;
+        transform: scale(1.2);
+      }
+
+      i {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  .footer-logo img {
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
