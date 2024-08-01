@@ -12,12 +12,14 @@ import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
 import Footer from "./components/footer/Footer";
 import License from "./components/license/License";
-
+import ScrollAnimation from "./reusable/FadeInBottom";
+import ScrollToTopButton from "./pages/ScrollTop/ScrollToTop";
 const DEBOUNCE_TIME = 0;
 
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
+  const [showScrollTopButton, setShowScrollTopButton] = useState(false);
 
   const handleMouseMove = debounce((e) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
@@ -25,8 +27,10 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -40,6 +44,14 @@ const App = () => {
     };
     moveTrail();
   }, [mousePosition]);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) { // Show button if scrolled down 300px
+      setShowScrollTopButton(true);
+    } else {
+      setShowScrollTopButton(false);
+    }
+  };
 
   const cursorStyle = {
     position: "fixed",
@@ -77,15 +89,24 @@ const App = () => {
       <Navbar />
       <Header />
       <div className="content">
-        <Home />
-        <AboutMe />
+        <ScrollAnimation>
+          <Home />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <AboutMe />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <Skills />
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <Projects />
+        </ScrollAnimation>
       </div>
-      <Skills />
-      <Projects />
       <Footer />
       <License />
       <motion.div className="cursor" style={cursorStyle} />
       <motion.div className="cursor-trail" style={trailStyle} />
+      <ScrollToTopButton showButton={showScrollTopButton} />
     </div>
   );
 };

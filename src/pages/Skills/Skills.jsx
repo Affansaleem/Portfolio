@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
 import Lottie from "lottie-react";
 import "./Skills.scss";
-import javascriptAnimation from "../../../public/lottie/react.json"; // Correct path to the JSON file
-import firebase from "../../../public/lottie/firebase.json"; // Correct path to the JSON file
-import github from "../../../public/lottie/github.json"; // Correct path to the JSON file
+import javascriptAnimation from "../../../public/lottie/react.json";
+import firebase from "../../../public/lottie/firebase.json";
+import github from "../../../public/lottie/github.json";
 import git from "../../../public/lottie/git.json";
-import photoshop from "../../../public/lottie/photoshop.json"; // Correct path to the JSON file
+import photoshop from "../../../public/lottie/photoshop.json";
 
 function Skills() {
   useEffect(() => {

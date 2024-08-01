@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./navbar.scss";
 
 const Navbar = () => {
+  const [activeSection, setActiveSection] = useState("#home");
+
   const handleScroll = (e, id) => {
     e.preventDefault();
     const section = document.querySelector(id);
@@ -12,6 +15,8 @@ const Navbar = () => {
       top: sectionPosition,
       behavior: "smooth",
     });
+
+    setActiveSection(id);
   };
 
   return (
@@ -19,38 +24,38 @@ const Navbar = () => {
       <div className="navbar__logo">
         <img src="haiii.png" alt="Logo" />
       </div>
-      <ul className="navbar__menu flex space-x-8 text-white text-sm font-mono">
-        <li className="navbar__item">
+      <ul className="navbar__menu">
+        <li className={`navbar__item ${activeSection === "#home" ? "active" : ""}`}>
           <a
             href="#home"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            className="navbar__link"
             onClick={(e) => handleScroll(e, "#home")}
           >
             &lt;/Home&gt;
           </a>
         </li>
-        <li className="navbar__item">
+        <li className={`navbar__item ${activeSection === "#about" ? "active" : ""}`}>
           <a
             href="#about"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            className="navbar__link"
             onClick={(e) => handleScroll(e, "#about")}
           >
             &lt;/AboutMe&gt;
           </a>
         </li>
-        <li className="navbar__item">
+        <li className={`navbar__item ${activeSection === "#skills" ? "active" : ""}`}>
           <a
             href="#skills"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            className="navbar__link"
             onClick={(e) => handleScroll(e, "#skills")}
           >
             &lt;/Skills&gt;
           </a>
         </li>
-        <li className="navbar__item">
+        <li className={`navbar__item ${activeSection === "#projects" ? "active" : ""}`}>
           <a
             href="#projects"
-            className="text-lg navbar__link relative no-underline transition-all duration-500 hover:text-white hover:text-2xl hover:before:content-['•'] hover:before:text-2xl"
+            className="navbar__link"
             onClick={(e) => handleScroll(e, "#projects")}
           >
             &lt;/Projects&gt;

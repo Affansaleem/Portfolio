@@ -4,15 +4,15 @@
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(34, 34, 34, 0.5);
-  backdrop-filter: blur(15px);
+  background-color: rgba(34, 34, 34, 0.6); /* Slightly lighter background */
+  backdrop-filter: blur(10px); /* Slightly less blur for a clearer background */
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
   border-radius: 50px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Slightly more prominent shadow */
 
   &__logo img {
     height: 60px;
@@ -21,6 +21,37 @@
   &__menu {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem; /* Increased spacing between menu items */
+  }
+
+  &__item {
+    position: relative;
+    
+    &.active .navbar__link {
+      color: #00bcd4; /* Cyan color for active link */
+      font-size: 1.3rem; /* Larger font size for active link */
+      font-weight: 700; /* Bold font */
+      background: linear-gradient(135deg, rgba(0, 188, 212, 0.3), rgba(0, 188, 212, 0)); /* Cyan glowing background */
+      border-radius: 0.25rem; /* Rounded corners for glow effect */
+      padding: 0.6rem 1rem; /* Padding to make space for glow effect */
+      box-shadow: 0 0 12px rgba(0, 188, 212, 0.7); /* More prominent glowing shadow */
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #ffffff; /* Default text color */
+    font-size: 1.2rem; /* Larger font size for normal links */
+    transition: all 0.3s ease; /* Smooth transition for color changes */
+    position: relative;
+    
+    &:hover {
+      color: #00bcd4; /* Cyan color on hover */
+      font-size: 1.3rem; /* Larger font size on hover */
+      background: linear-gradient(135deg, rgba(0, 188, 212, 0.3), rgba(0, 188, 212, 0)); /* Glow effect on hover */
+      border-radius: 0.25rem; /* Rounded corners for glow effect */
+      padding: 0.6rem 1rem; /* Padding to make space for glow effect */
+      box-shadow: 0 0 12px rgba(0, 188, 212, 0.7); /* Glowing shadow */
+    }
   }
 }

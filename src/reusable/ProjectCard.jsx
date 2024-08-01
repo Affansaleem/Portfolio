@@ -1,7 +1,9 @@
+import ScrollAnimation from "./FadeInBottom";
 import "./ProjectCard.scss";
 
 function ProjectCard({ title, description, githubLink, liveViewLink, images }) {
   return (
+    <ScrollAnimation>
     <div className="project-card">
       <div className="project-card__header">
         {images.slice(0, 3).map((image, index) => (
@@ -42,6 +44,7 @@ function ProjectCard({ title, description, githubLink, liveViewLink, images }) {
         </div>
       </div>
     </div>
+    </ScrollAnimation>
   );
 }
 

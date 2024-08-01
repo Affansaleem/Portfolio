@@ -18,7 +18,7 @@
     "@types/three": "^0.165.0",
     "animejs": "^3.2.2",
     "atropos": "^2.0.2",
-    "framer-motion": "^11.2.11",
+    "framer-motion": "^11.3.19",
     "lottie-react": "^2.4.0",
     "node-sass": "^9.0.0",
     "react": "^18.3.1",
@@ -31,7 +31,7 @@
     "react-three-dots": "^1.0.4",
     "shadergradient": "^1.2.14",
     "styled-components": "^6.1.11",
-    "three": "^0.165.0"
+    "three": "^0.154.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

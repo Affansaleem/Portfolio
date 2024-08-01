@@ -19,7 +19,7 @@ function Footer() {
             <i className="fab fa-instagram"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/affan-saleem/"
+            href="https://www.linkedin.com/in/affan-salim/"
             className="footer-social-link"
             target="_blank"
             rel="noopener noreferrer"
