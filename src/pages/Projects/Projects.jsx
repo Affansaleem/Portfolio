@@ -70,10 +70,10 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" className="projects-container mt-10">
+    <div id="projects" className="pl-3">
       <h2 className="section-title text-white text-2xl">
         <span className="section-icon">&lt;/&gt;</span> Projects
-        {" { }"}
+        {" {-------}"}
       </h2>
       {projects.map((project, index) => (
         <ProjectCard

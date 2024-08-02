@@ -1,0 +1,108 @@
+/* Base styles for Header */
+#home {
+  position: absolute;
+  top: 6rem; /* Adjusted to align with your design */
+  left: 0;
+  padding: 2rem;
+  text-align: left;
+  color: #ffffff; /* White text color */
+  width: 100%;
+}
+
+.text-6xl {
+  font-size: 4rem; /* Base font size for large screens */
+}
+
+.text-7xl {
+  font-size: 5rem; /* Base font size for extra-large screens */
+}
+
+.font-mono {
+  font-family: monospace; /* Monospace font for specific text */
+}
+
+.max-w-lg {
+  max-width: 32rem; /* Default max width */
+}
+.del{
+  margin-top: 10px;
+  font-family: monospace;
+  font-size: 18px
+}
+.exp{
+  margin-top: 10px;
+  font-family: monospace;
+  font-size: 18px
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .text-6xl {
+    font-size: 3.5rem; /* Font size for larger tablets */
+  }
+
+  .text-7xl {
+    font-size: 4.5rem; /* Font size for larger tablets */
+  }
+
+  #home {
+    padding: 4rem; /* Adjusted padding for larger tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 2.5rem; /* Font size for tablets */
+  }
+
+  .text-7xl {
+    font-size: 3rem; /* Font size for tablets */
+  }
+
+  #home {
+    padding: 3rem; /* Adjusted padding for tablets */
+  }
+
+  .max-w-lg {
+    max-width: 90%; /* Adjusted max width for mobile */
+  }
+  .del{
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 15px
+  }
+  .exp{
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 15px
+  }
+}
+
+@media (max-width: 480px) {
+  .text-6xl {
+    font-size: 2rem; /* Font size for mobile devices */
+  }
+
+  .text-7xl {
+    font-size: 2.5rem; /* Font size for mobile devices */
+  }
+
+  #home {
+    padding: 2rem; /* Adjusted padding for mobile devices */
+  }
+
+  .max-w-lg {
+    max-width: 100%; /* Full width for mobile devices */
+  }
+
+  .del{
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 15px
+  }
+  .exp{
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 15px
+  }
+}

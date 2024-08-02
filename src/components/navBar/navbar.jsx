@@ -3,11 +3,12 @@ import "./navbar.scss";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("#home");
+  const [menuActive, setMenuActive] = useState(false);
 
   const handleScroll = (e, id) => {
     e.preventDefault();
     const section = document.querySelector(id);
-    const offset = -120; // Adjust this value to set the offset above the section
+    const offset = -120;
     const sectionPosition =
       section.getBoundingClientRect().top + window.pageYOffset + offset;
 
@@ -17,6 +18,7 @@ const Navbar = () => {
     });
 
     setActiveSection(id);
+    setMenuActive(false); // Close menu after selecting an item on mobile
   };
 
   return (
@@ -24,7 +26,10 @@ const Navbar = () => {
       <div className="navbar__logo">
         <img src="haiii.png" alt="Logo" />
       </div>
-      <ul className="navbar__menu">
+      <div className="navbar__toggle" onClick={() => setMenuActive(!menuActive)}>
+        ☰ {/* You can replace this with an icon */}
+      </div>
+      <ul className={`navbar__menu ${menuActive ? "active" : ""}`}>
         <li className={`navbar__item ${activeSection === "#home" ? "active" : ""}`}>
           <a
             href="#home"

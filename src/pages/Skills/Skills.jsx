@@ -30,9 +30,9 @@ function Skills() {
 
   return (
     <div id="skills" className="skills-container">
-      <h2 className="section-title text-3xl text-white">
+      <h2 className="section-title text-white">
         <span className="section-icon">&lt;/&gt;</span> Skills
-        {" { }"}
+        {" {-------}"}
       </h2>
       <div className="skills-grid">
         <div className="skill-card">

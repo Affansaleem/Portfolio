@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "./header.scss"
 
 const stretchJiggleVariants = {
   initial: {
@@ -27,9 +28,9 @@ const splitText = (text) => {
   const words = text.split(" ");
   const spans = [];
 
-  // Iterate through words
+  
   words.forEach((word, index) => {
-    // Add span for each character in the word
+    
     spans.push(
       ...word.split("").map((char, i) => (
         <motion.span
@@ -70,11 +71,11 @@ const Header = () => {
       </div>
 
       <div className="max-w-lg mt-10 rounded-lg shadow-lg text-left">
-        <div className="font-mono mt-4 text-lg text-white">
+        <div className="exp text-white">
           EXPERIENCED FLUTTER AND REACT JS DEVELOPER. PASSIONATE ABOUT CLEAN
           DESIGN AND ARCHITECTURE.
         </div>
-        <div className="font-mono mt-4 text-lg text-white">
+        <div className="del text-white">
           COMMITMENT TO DELIVERY OF SEAMLESS USER EXPERIENCE AND DESIGNS
         </div>
       </div>

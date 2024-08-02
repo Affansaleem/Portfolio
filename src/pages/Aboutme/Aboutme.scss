@@ -1,8 +1,9 @@
 .about-me-container {
   width: 100%;
-  padding: 40px 20px;
+  padding-left: 20px;
   background: linear-gradient(135deg, #040222 0%, #210235 100%);
-  color: #fff; /* Text color */
+  color: #fff;
+  text-align: center;
 }
 
 .section-title {
@@ -13,10 +14,11 @@
 }
 
 .section-icon {
-  color: #00ffab; /* Color for the icon */
-  margin-right: 10px;
-  font-size: 1.5rem;
+  color: #00ffab;
+  margin-right: 30px;
+  font-size: 2rem;
 }
+
 
 .about-me-content {
   display: flex;
@@ -28,26 +30,39 @@
 }
 
 .about-me-text {
-  font-size: 1.125rem; /* Text size */
+  font-size: 1.125rem;
   line-height: 1.6;
-  font-family: "Roboto", sans-serif; /* Example: Replace 'Roboto' with your desired font */
-  font-weight: 300; /* Thin font weight */
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 .about-me-image img {
   width: 270px;
   height: 400px;
   border-radius: 10px;
-  border: 2px solid #fff; /* Border for the image */
+  border: 2px solid #fff;
   display: block;
-  margin: 0 auto; /* Center the image horizontally */
+  margin: 0 auto;
 }
 
-/* Media query for larger screens */
+@media (min-width: 400px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-me-text {
+    font-size: 1.1rem;
+  }
+
+  .about-me-image {
+    width: 250px;
+    height: 400px;
+  }
+}
 @media (min-width: 768px) {
   .about-me-content {
     flex-direction: row;
-    align-items: center; /* Center items vertically */
+    align-items: center;
   }
 
   .about-me-text,
@@ -56,7 +71,43 @@
   }
 
   .about-me-image {
+    width: 200px;
+    height: 3400px;
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  .about-me-text {
+    font-size: 1.25rem; /* Slightly larger text size */
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 2.5rem; /* Larger title size */
+  }
+
+  .about-me-text {
+    font-size: 1.5rem; /* Larger text size */
+  }
+
+  .about-me-image {
+    width: 250px; /* Adjust image size for larger screens */
+    height: 400px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-title {
+    font-size: 3rem; /* Even larger title size */
+  }
+
+  .about-me-text {
+    font-size: 1rem; /* Larger text size for very large screens */
+  }
+
+  .about-me-image {
+    width: 300px; /* Adjust image size for very large screens */
+    height: 400px;
   }
 }

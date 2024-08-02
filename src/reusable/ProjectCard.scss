@@ -8,7 +8,7 @@
   margin: 1rem auto; /* Center the card with some margin */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: left; /* Align text to the left */
-  
+
   &:hover {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
     transform: translateY(-5px); /* Slight lift on hover */
@@ -128,5 +128,49 @@
         transform: scale(1.05); /* Slight zoom on hover */
       }
     }
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1rem; /* Reduce padding */
+    margin: 0.5rem; /* Reduce margin */
+  }
+
+  .project-card__body {
+    flex-direction: column; /* Stack content and image vertically */
+    gap: 1rem; /* Reduce gap between content and image */
+  }
+
+  .project-card__title {
+    font-size: 1.25rem; /* Reduce title font size */
+  }
+
+  .project-card__description {
+    font-size: 0.875rem; /* Reduce description font size */
+  }
+
+  .project-card__image img {
+    max-height: 200px; /* Reduce image height */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 0.75rem; /* Further reduce padding */
+    margin: 0.25rem; /* Further reduce margin */
+  }
+
+  .project-card__title {
+    font-size: 1.125rem; /* Further reduce title font size */
+  }
+
+  .project-card__description {
+    font-size: 0.75rem; /* Further reduce description font size */
+  }
+
+  .project-card__image img {
+    max-height: 150px; /* Further reduce image height */
   }
 }

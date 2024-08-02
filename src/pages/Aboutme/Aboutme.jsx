@@ -1,4 +1,3 @@
-import React from "react";
 import "./Aboutme.scss";
 
 const AboutMe = () => {
@@ -6,7 +5,7 @@ const AboutMe = () => {
     <div id="about" className="about-me-container">
       <h2 className="section-title">
         <span className="section-icon">&lt;/&gt;</span> AboutMe
-        {" { }"}
+        {" {-------}"}
       </h2>
       <div className="about-me-content">
         <div className="about-me-text">
